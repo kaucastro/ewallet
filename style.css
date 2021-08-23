@@ -15,20 +15,61 @@ body {
   height: 100vh;
 }
 #popupbackground {
-  background-color: rgba(20, 8, 8, 0.486);
+  background-color: rgba(0, 0, 0, 0.276);
   width: 100vw;
   height: 100vh;
   z-index: 5;
   position: absolute;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 }
+#popup form{
+display: flex;
+align-items: initial;
+flex-direction: column;
+}
+#popup form div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#popup form a{
+  text-align: end;
+}
+form input,form select,form button{
+   padding: 10px;
+   border-radius: 5px;
+   margin: auto 5px;
+   margin-top: 10px;
+   flex: 1;
+   border: 1px solid transparent;
+   transition: border-color linear 0.3s;
+   }
+   form input:focus{
+     border-color: #7c0061;
+
+   }
+   form label{
+     font-weight: 500;
+     color: #969cb2;
+     font-size: 14px;
+   }
+   form button{
+     background-color: #7c0061;
+     color: #fff;
+     margin-top: 30px;
+     transition: background linear 0.2ms;
+   }
+   form button:hover{
+     background-color: #570044;
+   }
 #popup {
   width: 500px;
   padding: 15px;
   background-color: #f0f2f5;
   border-radius: 15px;
+  margin: auto;
 }
 #header {
   width: 100%;

@@ -14,29 +14,33 @@
     <div id="popupbackground">
       <div id="popup">
         <form>
+          <a> 
+            <i data-feather="x"></i>
+          </a>
           <label for="title">título</label>
           <input
             type="text"
             name="title"
             placeholder="descrição de lançamento"
           />
-          <label for="price">Preço</label>
-          <input type="text" name="price"placeholder="Valor em reais (R$)">
-          
-          <label for="category">Categoria</label>
-          <select type="text" id="category">
-               <option value=""></option>
-               <option value="entrada ">Entrada</option>
-               <option value="´saída">Saída</option>
-          </select>
-        </div>
-        <label for="identifier">Identificado</label>
-          <input 
-          type="text" 
-          name="identifier"
-          placeholder="Descrição da Categoria">
+          <div>
+            <label for="price">Preço</label>
+            <input type="text" name="price" placeholder="Valor em reais (R$)" />
+
+            <label for="category">Categoria</label>
+            <select type="text" id="category">
+              <option value=""></option>
+              <option value="entrada ">Entrada</option>
+              <option value="´saída">Saída</option>
+            </select>
+          </div>
+          <label for="identifier">Identificador</label>
+          <input
+            type="text"
+            name="identifier"
+            placeholder="Descrição da Categoria"
           />
-          <button></button>
+          <button>Cadastrar</button>
         </form>
       </div>
     </div>
@@ -111,5 +115,5 @@
     <script>
       feather.replace();
     </script>
-  </body>
+    <script src="js/index.js"></script>
 </html>
