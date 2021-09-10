@@ -72,9 +72,33 @@ var date = new Date ( ).toLocaleDateString( );
   transactions.push(transaction)
   localStorage.setItem("@ewallet/transactions", JSON.stringify(transactions));
    window.location.reload( );
-   
-
 });
+
+  var entrada = document.querySelector(".in h1")
+  var saída = document.querySelector(".out h1")
+  var total = document.querySelector(".total h1")
+
+  var valoresSaída = transactions.reduce( ( count, currentValue )=> { 
+    if(currentValue.type ==="saída"){
+    return count + currentValue.price;
+  }else {
+     return count;
+    }
+  },0)
+
+  var somatorio = valoresEntrada = valoresSaída
+
+  entrada.innerHTML = moneyFormat("BRL", valoresEntrada)
+  saída.innerHTML = moneyFormat("BRL", valoresSaída)
+  total.innerHTML = moneyFormat("BRL", somatorio)
+
+  var valoresEntrada = transactions.reduce( ( count, currentValue )=> { 
+    if(currentValue.type ==="entrada"){
+    return count + currentValue.price;
+  }else {
+     return count;
+    }
+  },0)
 
 function moneyFormat(currency, price) {
   var value = new Intl.NumberFormat("pt-BR", {
